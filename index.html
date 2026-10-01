@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SafariWeb Kenya — Websites for Kenyan Businesses | Ksh 10,000 One-Time</title>
+<meta name="description" content="Professional websites for all Kenyan businesses. Ksh 10,000 one-time fee. We host it for you — no domain or hosting charges. Chat on WhatsApp today.">
+<style>
+/* ============ BASE ============ */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#0a7d4f;
+  --green-2:#12b06f;
+  --green-dark:#065235;
+  --amber:#f2a516;
+  --ink:#0d1a14;
+  --muted:#5b6b63;
+  --line:#e4ece7;
+  --bg:#f7faf8;
+  --radius:18px;
+  --shadow:0 14px 34px rgba(8,60,40,.09);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.65;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{width:min(1180px,92%);margin-inline:auto}
+.center{text-align:center}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:13px 22px;border-radius:999px;font-weight:700;font-size:.93rem;
+  border:2px solid transparent;cursor:pointer;transition:.22s;white-space:nowrap;
+}
+.btn-wa{background:#25D366;color:#fff;box-shadow:0 10px 22px rgba(37,211,102,.32)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(37,211,102,.42)}
+.btn-primary{background:var(--green);color:#fff;box-shadow:0 10px 22px rgba(10,125,79,.28)}
+.btn-primary:hover{background:var(--green-dark);transform:translateY(-2px)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--green);color:var(--green)}
+.btn-sm{padding:10px 16px;font-size:.84rem}
+
+/* ============ HEADER / NAV ============ */
+header{
+  position:sticky;top:0;z-index:200;
+  background:rgba(255,255,255,.94);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.hdr{display:flex;align-items:center;gap:14px;height:70px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.03rem;letter-spacing:-.3px;white-space:nowrap}
+.logo-mark{
+  width:36px;height:36px;border-radius:11px;flex:none;
+  background:linear-gradient(135deg,var(--green),var(--green-2));
+  display:grid;place-items:center;color:#fff;font-size:1rem;font-weight:800;
+  box-shadow:0 8px 18px rgba(10,125,79,.3);
+}
+.logo small{display:block;font-size:.66rem;font-weight:600;color:var(--muted);letter-spacing:.4px;text-transform:uppercase;line-height:1}
+
+.hdr-right{margin-left:auto;display:flex;align-items:center;gap:12px}
+
+nav ul{display:flex;align-items:center;gap:2px}
+nav a{
+  display:block;padding:8px 9px;font-size:.815rem;font-weight:600;
+  color:#3d4d45;border-radius:9px;white-space:nowrap;transition:.18s;
+}
+nav a:hover{background:#eef6f1;color:var(--green)}
+nav a.active{color:var(--green);background:#e6f5ee}
+
+.burger{
+  display:none;width:46px;height:46px;border:1px solid var(--line);
+  background:#fff;border-radius:13px;position:relative;cursor:pointer;flex:none;
+}
+.burger span{
+  position:absolute;left:13px;right:13px;height:2px;background:var(--ink);
+  border-radius:2px;transition:.26s;
+}
+.burger span:nth-child(1){top:16px}
+.burger span:nth-child(2){top:22px}
+.burger span:nth-child(3){top:28px}
+.burger.active span:nth-child(1){top:22px;transform:rotate(45deg)}
+.burger.active span:nth-child(2){opacity:0}
+.burger.active span:nth-child(3){top:22px;transform:rotate(-45deg)}
+
+/* ============ PAGES ============ */
+.page{display:none}
+.page.active{display:block;animation:fadeUp .38s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.sec{padding:66px 0}
+.sec-tight{padding:44px 0}
+.sec-alt{background:#fff}
+
+/* ============ TYPOGRAPHY ============ */
+h1{font-size:clamp(1.95rem,5vw,3.15rem);line-height:1.13;letter-spacing:-1.1px;font-weight:800}
+h2{font-size:clamp(1.5rem,3.4vw,2.15rem);line-height:1.2;letter-spacing:-.7px;font-weight:800}
+h3{font-size:1.12rem;font-weight:750;letter-spacing:-.3px}
+.lead{font-size:clamp(1rem,2vw,1.13rem);color:var(--muted);max-width:62ch}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:7px;
+  background:#e6f5ee;color:var(--green-dark);
+  padding:6px 14px;border-radius:999px;font-size:.76rem;font-weight:800;
+  letter-spacing:.7px;text-transform:uppercase;margin-bottom:16px;
+}
+.sec-head{max-width:720px;margin:0 auto 42px;text-align:center}
+.sec-head .lead{margin:12px auto 0}
+.muted{color:var(--muted)}
+
+/* ============ HERO ============ */
+.hero{
+  background:
+    radial-gradient(900px 420px at 85% -15%,#d8f2e5,transparent),
+    radial-gradient(700px 380px at -10% 110%,#fdf0d6,transparent),
+    linear-gradient(180deg,#fff,#f4faf7);
+  padding:70px 0 62px;
+}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.hero h1 span{color:var(--green)}
+.hero .lead{margin-top:18px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-note{margin-top:16px;font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:8px}
+.dot-live{width:9px;height:9px;border-radius:50%;background:#25D366;box-shadow:0 0 0 0 rgba(37,211,102,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 11px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.badge{
+  background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:8px 15px;font-size:.79rem;font-weight:700;color:#38493f;
+  box-shadow:0 4px 12px rgba(8,60,40,.05);
+}
+
+/* ============ CARDS ============ */
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px;box-shadow:0 6px 20px rgba(8,60,40,.05);transition:.25s;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#cfe6da}
+.card .ico{
+  width:48px;height:48px;border-radius:14px;display:grid;place-items:center;
+  font-size:1.35rem;background:#e6f5ee;margin-bottom:16px;
+}
+.card h3{margin-bottom:8px}
+.card p{font-size:.92rem;color:var(--muted)}
+
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+
+/* ============ WEBSITE MOCKUPS ============ */
+.mock{
+  background:#fff;border:1px solid #e1eae5;border-radius:14px;overflow:hidden;
+  box-shadow:0 12px 28px rgba(8,60,40,.10);transition:.28s;
+}
+.mock:hover{transform:translateY(-6px);box-shadow:0 20px 42px rgba(8,60,40,.17)}
+.mock-top{
+  height:26px;background:#eef3f0;display:flex;align-items:center;gap:5px;
+  padding:0 11px;border-bottom:1px solid #e1eae5;
+}
+.mock-top i{width:7px;height:7px;border-radius:50%;background:#cfdbd5;flex:none}
+.mock-url{flex:1;height:8px;border-radius:5px;background:#e0e8e3;margin-left:8px}
+.mock-body{padding:12px;display:flex;flex-direction:column;gap:9px;background:#fff}
+
+.m-nav{display:flex;gap:6px;align-items:center}
+.m-nav b{width:32px;height:8px;border-radius:3px;background:var(--m1)}
+.m-nav span{width:18px;height:5px;border-radius:3px;background:#dce5e0}
+.m-nav span:first-of-type{margin-left:auto}
+
+.m-hero{background:var(--m2);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:7px}
+.m-h1{height:11px;width:76%;background:var(--m1);border-radius:4px;opacity:.92}
+.m-h2{height:7px;width:56%;background:#bccbc4;border-radius:4px}
+.m-pill{height:14px;width:62px;background:var(--m3);border-radius:8px;margin-top:4px}
+
+.m-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.m-card{height:40px;background:#f1f5f3;border-radius:8px;border:1px solid #e6ede9}
+.m-card.tall{height:56px}
+.m-strip{height:22px;background:var(--m2);border-radius:8px}
+.m-strip.short{width:60%}
+.m-img{height:58px;border-radius:9px;background:linear-gradient(135deg,var(--m1),var(--m3));opacity:.85}
+.m-split{display:grid;grid-template-columns:1.1fr .9fr;gap:8px}
+.m-split .m-img{height:64px}
+
+.theme-a{--m1:#0a7d4f;--m2:#e6f5ee;--m3:#f2a516}
+.theme-b{--m1:#1b3a8f;--m2:#eaf0ff;--m3:#ff6b3d}
+.theme-c{--m1:#8a1f4a;--m2:#fdeaf1;--m3:#f2a516}
+.theme-d{--m1:#0d5c63;--m2:#e3f4f5;--m3:#ffb703}
+.theme-e{--m1:#5b2ea6;--m2:#f0eafd;--m3:#25D366}
+.theme-f{--m1:#a03c00;--m2:#fdeee4;--m3:#0a7d4f}
+.theme-g{--m1:#0f3057;--m2:#e8eef6;--m3:#f2a516}
+.theme-h{--m1:#b3123c;--m2:#fdeaea;--m3:#0a7d4f}
+.theme-i{--m1:#046a38;--m2:#e6f4ec;--m3:#d90429}
+
+.work{display:flex;flex-direction:column;gap:14px}
+.work-meta{padding:0 4px}
+.work-meta h3{font-size:1rem;margin-bottom:2px}
+.work-meta p{font-size:.83rem;color:var(--muted)}
+.tag{
+  display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.5px;
+  text-transform:uppercase;color:var(--green);background:#e6f5ee;
+  padding:3px 9px;border-radius:999px;margin-bottom:7px;
+}
+
+/* ============ PRICING ============ */
+.price-card{
+  background:linear-gradient(160deg,#065235,#0a7d4f 55%,#12b06f);
+  color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;
+  box-shadow:0 26px 60px rgba(6,82,53,.34);
+}
+.price-card::after{
+  content:"";position:absolute;width:280px;height:280px;border-radius:50%;
+  background:rgba(255,255,255,.09);top:-110px;right:-80px;
+}
+.price-card::before{
+  content:"";position:absolute;width:180px;height:180px;border-radius:50%;
+  background:rgba(242,165,22,.16);bottom:-90px;left:-60px;
+}
+.price-card>*{position:relative;z-index:2}
+.price-amt{font-size:clamp(2.4rem,6vw,3.4rem);font-weight:800;letter-spacing:-2px;line-height:1}
+.price-amt small{font-size:1rem;font-weight:700;letter-spacing:0;opacity:.85;display:block;margin-bottom:6px}
+.price-list{margin:24px 0;display:grid;gap:11px}
+.price-list li{display:flex;gap:11px;font-size:.92rem;align-items:flex-start}
+.tick{
+  width:21px;height:21px;border-radius:50%;background:rgba(255,255,255,.2);
+  display:grid;place-items:center;font-size:.68rem;flex:none;margin-top:2px;font-weight:800;
+}
+.price-note{
+  background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.22);
+  border-radius:14px;padding:14px 16px;font-size:.85rem;margin-bottom:20px;
+}
+.btn-white{background:#fff;color:var(--green-dark);width:100%}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(0,0,0,.2)}
+
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+.compare>div{padding:24px}
+.compare .us{background:#f0faf5;border-right:1px solid var(--line)}
+.compare h3{margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.compare li{font-size:.89rem;padding:7px 0;display:flex;gap:9px;color:#40524a;border-bottom:1px dashed #e8efeb}
+.compare li:last-child{border-bottom:0}
+.x{color:#c0392b;font-weight:800}
+.v{color:var(--green);font-weight:800}
+
+/* ============ TESTIMONIALS ============ */
+.tcard{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px;box-shadow:0 6px 20px rgba(8,60,40,.05);
+  display:flex;flex-direction:column;gap:14px;transition:.25s;
+}
+.tcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.stars{color:var(--amber);letter-spacing:2px;font-size:1rem}
+.tcard p{font-size:.93rem;color:#3a4b43;flex:1}
+.tcard .who{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:15px}
+.avatar{
+  width:44px;height:44px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-weight:800;color:#fff;font-size:.95rem;background:linear-gradient(135deg,var(--green),var(--green-2));
+}
+.who strong{display:block;font-size:.9rem}
+.who span{font-size:.78rem;color:var(--muted)}
+.result{
+  display:inline-flex;align-items:center;gap:7px;font-size:.76rem;font-weight:800;
+  background:#e6f5ee;color:var(--green-dark);padding:5px 12px;border-radius:999px;width:fit-content;
+}
+
+/* ============ STEPS ============ */
+.steps{display:grid;gap:18px}
+.step{
+  display:flex;gap:18px;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius);padding:24px;transition:.25s;
+}
+.step:hover{border-color:#cfe6da;box-shadow:var(--shadow)}
+.step-num{
+  width:46px;height:46px;border-radius:14px;flex:none;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--green),var(--green-2));color:#fff;font-weight:800;font-size:1.05rem;
+}
+
+/* ============ FAQ ============ */
+.faq{display:grid;gap:12px;max-width:840px;margin:0 auto}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:18px 22px;transition:.2s;
+}
+details[open]{border-color:#cfe6da;box-shadow:0 8px 22px rgba(8,60,40,.07)}
+summary{
+  cursor:pointer;font-weight:700;font-size:.97rem;list-style:none;
+  display:flex;justify-content:space-between;gap:16px;align-items:center;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;color:var(--green);font-weight:700;line-height:1;transition:.25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:12px;font-size:.9rem;color:var(--muted)}
+
+/* ============ STATS ============ */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;text-align:center}
+.stat b{display:block;font-size:1.85rem;font-weight:800;color:var(--green);letter-spacing:-1px}
+.stat span{font-size:.82rem;color:var(--muted);font-weight:600}
+
+/* ============ CTA BANNER ============ */
+.cta-band{
+  background:linear-gradient(135deg,#065235,#0a7d4f 60%,#12b06f);
+  border-radius:26px;padding:48px 38px;text-align:center;color:#fff;
+  box-shadow:0 24px 54px rgba(6,82,53,.3);
+}
+.cta-band h2{color:#fff}
+.cta-band p{color:rgba(255,255,255,.88);max-width:60ch;margin:14px auto 26px}
+.cta-band .row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+
+/* ============ FORM ============ */
+.form{display:grid;gap:14px}
+.field{display:grid;gap:6px}
+.field label{font-size:.82rem;font-weight:700;color:#3d4d45}
+.field input,.field textarea,.field select{
+  width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;
+  font-family:inherit;font-size:.92rem;background:#fff;outline:none;transition:.2s;color:var(--ink);
+}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--green);box-shadow:0 0 0 4px rgba(10,125,79,.11)}
+.field textarea{resize:vertical;min-height:110px}
+
+/* ============ FOOTER ============ */
+footer{background:#08281c;color:#c9ded4;padding:56px 0 26px;margin-top:20px}
+.f-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:34px}
+footer h4{color:#fff;font-size:.86rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
+footer a{font-size:.87rem;color:#a9c6b9;display:block;padding:5px 0;transition:.2s}
+footer a:hover{color:#fff;padding-left:4px}
+footer p{font-size:.87rem;color:#a9c6b9}
+.f-logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;margin-bottom:14px;font-size:1.02rem}
+.f-bottom{
+  border-top:1px solid rgba(255,255,255,.1);margin-top:38px;padding-top:20px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.8rem;color:#8fb0a1;
+}
+
+/* ============ FLOATING WHATSAPP ============ */
+.wa-float{
+  position:fixed;right:20px;bottom:20px;z-index:300;
+  width:60px;height:60px;border-radius:50%;background:#25D366;
+  display:grid;place-items:center;box-shadow:0 12px 30px rgba(37,211,102,.45);
+  transition:.25s;animation:float 3s ease-in-out infinite;
+}
+.wa-float:hover{transform:scale(1.09)}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.wa-float:hover{animation:none}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1080px){
+  nav{
+    position:fixed;top:70px;right:0;bottom:0;width:min(330px,88%);
+    background:#fff;transform:translateX(106%);transition:transform .32s cubic-bezier(.4,0,.2,1);
+    box-shadow:-24px 0 50px rgba(8,60,40,.15);padding:20px 18px 40px;
+    overflow-y:auto;margin-left:0;border-left:1px solid var(--line);
+  }
+  nav.open{transform:translateX(0)}
+  nav ul{flex-direction:column;align-items:stretch;gap:3px}
+  nav a{padding:14px 16px;font-size:.96rem;border-radius:11px}
+  nav a.active{background:#e6f5ee}
+  .burger{display:block}
+  nav::after{
+    content:"Ksh 10,000 one-time • Free hosting";
+    display:block;margin-top:18px;padding:14px;border-radius:12px;
+    background:#e6f5ee;color:var(--green-dark);font-size:.8rem;font-weight:700;text-align:center;
+  }
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .f-grid{grid-template-columns:1fr 1fr;gap:28px}
+}
+@media(max-width:820px){
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .sec{padding:52px 0}
+}
+@media(max-width:640px){
+  .hdr{height:64px}
+  nav{top:64px}
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr;gap:12px}
+  .compare{grid-template-columns:1fr}
+  .compare .us{border-right:0;border-bottom:1px solid var(--line)}
+  .f-grid{grid-template-columns:1fr}
+  .hdr-cta{display:none}
+  .hero{padding:48px 0}
+  .sec{padding:44px 0}
+  .price-card{padding:30px 22px}
+  .cta-band{padding:36px 22px}
+  .step{flex-direction:column;gap:14px}
+  .wa-float{width:56px;height:56px;right:15px;bottom:15px}
+  .mock-body{padding:10px}
+  .logo small{display:none}
+}
+@media(max-width:380px){
+  .stats{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="container hdr">
+    <a href="#home" class="logo">
+      <span class="logo-mark">SW</span>
+      <span>SafariWeb Kenya<small>Websites that sell</small></span>
+    </a>
+
+    <div class="hdr-right">
+      <nav id="nav">
+        <ul>
+          <li><a href="#home" data-page="home">Home</a></li>
+          <li><a href="#services" data-page="services">Services</a></li>
+          <li><a href="#portfolio" data-page="portfolio">Portfolio</a></li>
+          <li><a href="#pricing" data-page="pricing">Pricing</a></li>
+          <li><a href="#reviews" data-page="reviews">Reviews</a></li>
+          <li><a href="#process" data-page="process">Process</a></li>
+          <li><a href="#faq" data-page="faq">FAQ</a></li>
+          <li><a href="#about" data-page="about">About</a></li>
+          <li><a href="#blog" data-page="blog">Blog</a></li>
+          <li><a href="#contact" data-page="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-wa btn-sm hdr-cta"
+         href="https://wa.me/254792456359?text=Hi%20SafariWeb%2C%20I%20want%20a%20website%20for%20my%20business%20at%20Ksh%2010%2C000"
+         target="_blank" rel="noopener">WhatsApp Us</a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     PAGE 1 — HOME
+============================================================ -->
+<section class="page active" id="home">
+
+  <div class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">🇰🇪 Built for Kenyan businesses</span>
+        <h1>Your business deserves a <span>real website</span> — for Ksh 10,000. Once. Forever.</h1>
+        <p class="lead">
+          We design, build <strong>and host</strong> a beautiful, mobile-friendly website for your
+          business. One payment of <strong>Ksh 10,000</strong> — no monthly fees, no domain bills,
+          no hosting charges. Ever.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-wa"
+             href="https://wa.me/254792456359?text=Hi%20SafariWeb%2C%20I%20want%20a%20website%20for%20my%20business%20at%20Ksh%2010%2C000"
+             target="_blank" rel="noopener">
+             💬 Chat on WhatsApp
+          </a>
+          <a href="#portfolio" class="btn btn-ghost">See websites I've built</a>
+        </div>
+        <p class="hero-note"><span class="dot-live"></span> Replying on WhatsApp right now — average reply under 10 minutes.</p>
+
+        <div class="badges">
+          <span class="badge">✅ Hosting included</span>
+          <span class="badge">✅ No monthly fees</span>
+          <span class="badge">✅ Ready in 3 days</span>
+          <span class="badge">✅ Mobile friendly</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="mock">
+          <div class="mock-top"><i></i><i></i><i></i><span class="mock-url"></span></div>
+          <div class="mock-body theme-a">
+            <div class="m-nav"><b></b><span></span><span></span><span></span></div>
+            <div class="m-hero">
+              <div class="m-h1"></div>
+              <div class="m-h2"></div>
+              <div class="m-pill"></div>
+            </div>
+            <div class="m-row"><div class="m-card"></div><div class="m-card"></div><div class="m-card"></div></div>
+            <div class="m-strip"></div>
+            <div class="m-split"><div class="m-img"></div><div class="m-card tall"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY US -->
+  <div class="sec sec-alt">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Why business owners choose us</span>
+        <h2>Others charge you every year. We don't.</h2>
+        <p class="lead">Most web designers build your site and then leave you to pay for domain and hosting.
+          We handle everything — and keep it online for you.</p>
+      </div>
+
+      <div class="grid g3">
+        <div class="card">
+          <div class="ico">🏠</div>
+          <h3>We host it for you</h3>
+          <p>No domain renewal. No hosting invoices. No "your site has expired" emails. We keep your website
+            online and running — included in your Ksh 10,000.</p>
+        </div>
+        <div class="card">
+          <div class="ico">💰</div>
+          <h3>One payment, no surprises</h3>
+          <p>Ksh 10,000 once. That's it. No monthly subscriptions, no hidden charges, no annual renewal fees
+            that catch you off guard.</p>
+        </div>
+        <div class="card">
+          <div class="ico">📱</div>
+          <h3>Built for phones first</h3>
+          <p>Over 85% of Kenyan customers browse on their phones. Every site we build loads fast and looks
+            perfect on any screen size.</p>
+        </div>
+        <div class="card">
+          <div class="ico">⚡</div>
+          <h3>Live in 3 days</h3>
+          <p>Send us your details and photos on WhatsApp. Your website is designed, built and published
+            within 3 working days.</p>
+        </div>
+        <div class="card">
+          <div class="ico">🔍</div>
+          <h3>Found on Google</h3>
+          <p>We set up your pages so customers searching for your services in your town can actually find you.</p>
+        </div>
+        <div class="card">
+          <div class="ico">🤝</div>
+          <h3>Real human support</h3>
+          <p>Need to change a price or add a new photo? Send a WhatsApp message. We update it for you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO PREVIEW -->
+  <div class="sec">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Recent work</span>
+        <h2>Websites that bring in real customers</h2>
+        <p class="lead">A quick look at some of the businesses we've put online across Kenya.</p>
+      </div>
+
+      <div class="grid g3">
+        <div class="work">
+          <div class="mock">
+            <div class="mock-top"><i></i><i></i><i></i><span class="mock-url"></span></div>
+            <div class="mock-body theme-a">
+              <div class="m-nav"><b></b><span></span><span></span><span></span></div>
+              <div class="m-hero"><div class="m-h1"></div><div class="m-h2"></div><div class="m-pill"></div></div>
+              <div class="m-row"><div class="m-card"></div><div class="m-card"></div><div class="m-card"></div></div>
+            </div>
+          </div>
+          <div class="work-meta">
+            <span class="tag">Boutique</span>
+            <h3>Mama Grace Boutique</h3>
+            <p>Nairobi • Online catalogue & orders</p>
+          </div>
+        </div>
+
+        <div class="work">
+          <div class="mock">
+            <div class="mock-top"><i></i><i></i><i></i><span class="mock-url"></span></div>
+            <div class="mock-body theme-b">
+              <div class="m-nav"><b></b><span></span><span></span><span></span></div>
+              <div class="m-split"><div class="m-img"></div><div class="m-card tall"></div></div>
+              <div class="m-row"><div class="m-card"></div><div class="m-card"></div><div class="m-card"></div></div>
+            </div>
+          </div>
+          <div class="work-meta">
+            <span class="tag">Hardware</span>
+            <h3>Otieno Hardware</h3>
+            <p>Kisumu • Product listings & directions</p>
+          </div>
+        </div>
+
+        <div class="work">
+          <div class="mock">
+            <div class="mock-top"><i></i><i></i><i></i><span class="mock-url"></span></div>
+            <div class="mock-body theme-c">
+              <div class="m-nav"><b></b><span></span><span></span><span></span></div>
+              <div class="m-hero"><div class="m-h1"></div><div class="m-h2"></div><div class="m-pill"></div></div>
+              <div class="m-strip"></div>
+              <div class="m-row"><div class="m-card"></div><div class="m-card"></div><div class="m-card"></div></div>
+            </div>
+          </div>
+          <div class="work-meta">
+            <span class="tag">Salon & Spa</span>
+            <h3>Mwikali Salon & Spa</h3>
+            <p>Machakos • Booking & price list</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="center" style="margin-top:34px">
+        <a href="#portfolio" class="btn btn-primary">View all 9 websites →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REVIEWS PREVIEW -->
+  <div class="sec sec-alt">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Client results</span>
+        <h2>They got more customers. So will you.</h2>
+      </div>
+
+      <div class="grid g3">
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p>"Before my website, I only got customers who walked past my shop. Now people find me on Google
+            and message me before they even leave home. <strong>My orders went up by about 40% in 3 months.</strong>"</p>
+          <div class="result">📈 +40% orders</div>
+          <div class="who">
+            <div class="avatar">GW</div>
+            <div><strong>Grace Wanjiru</strong><span>Mama Grace Boutique, Nairobi</span></div>
+          </div>
+        </div>
+
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p>"I was paying Ksh 3,500 every year for hosting somewhere else. SafariWeb charged me once and
+            that was it. <strong>My monthly revenue is up by Ksh 60,000</strong> because contractors now call me directly."</p>
+          <div class="result">💵 +Ksh 60,000 / month</div>
+          <div class="who">
+            <div class="avatar">PO</div>
+            <div><strong>Peter Otieno</strong><span>Otieno Hardware, Kisumu</span></div>
+          </div>
+        </div>
+
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p>"The booking page changed everything. Ladies book their appointments at night when I'm closed.
+            <strong>I now get 15–20 bookings a week from the website alone.</strong> Very happy with the work."</p>
+          <div class="result">📅 +18 bookings / week</div>
+          <div class="who">
+            <div class="avatar">FM</div>
+            <div><strong>Faith Mwikali</strong><span>Mwikali Salon & Spa, Machakos</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="center" style="margin-top:34px">
+        <a href="#reviews" class="btn btn-ghost">Read all reviews →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICING TEASER -->
+  <div class="sec">
+    <div class="container">
+      <div class="grid g2" style="align-items:center;gap:44px">
+        <div>
+          <span class="eyebrow">Simple pricing</span>
+          <h2>Ksh 10,000. One time. Everything included.</h2>
+          <p class="lead" style="margin-top:16px">
+            Unlike other web designers in Kenya who charge you for a domain name and hosting every single year,
+            <strong>we host your website for you</strong> as part of the package. You pay once and your site
+            stays online.
+          </p>
+          <ul class="price-list" style="color:var(--ink);margin-top:22px">
+            <li><span class="tick" style="background:#e6f5ee;color:var(--green)">✓</span> Custom website design (up to 6 pages)</li>
+            <li><span class="tick" style="background:#e6f5ee;color:var(--green)">✓</span> Free hosting — we keep it online</li>
+            <li><span class="tick" style="background:#e6f5ee;color:var(--green)">✓</span> WhatsApp & call buttons on every page</li>
+            <li><span class="tick" style="background:#e6f5ee;color:var(--green)">✓</span> Google Maps location & contact form</li>
+            <li><span class="tick" style="background:#e6f5ee;color:var(--green)">✓</span> Free updates for 12 months</li>
+          </ul>
+          <div style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="#pricing">See full pricing</a>
+            <a class="btn btn-wa" href="https://wa.me/254792456359?text=Hi%2C%20I%20want%20to%20start%20my%20Ksh%2010%2C000%20website" target="_blank" rel="noopener">Start on WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="price-card">
+          <span class="eyebrow" style="background:rgba(255,255,255,.2);color:#fff">Most popular</span>
+          <div class="price-amt"><small>One-time payment</small>Ksh 10,000</div>
+          <ul class="price-list">
+            <li><span class="tick">✓</span> Complete business website</li>
+            <li><span class="tick">✓</span> Hosting included — no yearly fees</li>
+            <li><span class="tick">✓</span> Domain setup handled by us</li>
+            <li><span class="tick">✓</span> Mobile responsive design</li>
+            <li><span class="tick">✓</span> WhatsApp order button</li>
+            <li><span class="tick">✓</span> Delivered in 3 working days</li>
+          </ul>
+          <div class="price-note">🔒 No monthly charges. No renewal fees. No hidden costs — ever.</div>
+          <a class="btn btn-white" href="https://wa.me/254792456359?text=Hi%2C%20I%20want%20the%20Ksh%2010%2C000%20website%20package" target="_blank" rel="noopener">💬 Get my website — WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="sec-tight">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Ready to get more customers?</h2>
+        <p>Send us one WhatsApp message. We'll ask a few questions, collect your photos and logo,
+          and have your website live in 3 days.</p>
+        <div class="row">
+          <a class="btn btn-white" style="width:auto" href="https://wa.me/254792456359?text=Hi%20SafariWeb%2C%20I%20want%20a%20website%20for%20my%20business" target="_blank" rel="noopener">💬 Message us on WhatsApp</a>
+          <a class="btn btn-ghost" href="#contact">Other ways to reach us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 2 — SERVICES
+============================================================ -->
+<section class="page" id="services">
+  <div class="sec">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">What we do</span>
+        <h2>Everything your business needs to look serious online</h2>
+        <p class="lead">One package. All the essentials. No add-on invoices later.</p>
+      </div>
+
+      <div class="grid g3">
+        <div class="card"><div class="ico">🎨</div><h3>Custom Website Design</h3>
+          <p>A website designed around your business — your colours, your logo, your photos. Not a recycled template.</p></div>
+        <div class="card"><div class="ico">🏠</div><h3>Hosting Included</h3>
+          <p>We host your website on fast, reliable servers and keep it online. You never receive a hosting bill.</p></div>
+        <div class="card"><div class="ico">🌐</div><h3>Domain Setup</h3>
+          <p>We register and configure your web address and connect it to your site — handled entirely by us.</p></div>
+        <div class="card"><div class="ico">📱</div><h3>Mobile Optimisation</h3>
+          <p>Every page is tested on phones, tablets and desktops so nothing breaks and nothing is cut off.</p></div>
+        <div class="card"><div class="ico">💬</div><h3>WhatsApp Order Button</h3>
+          <p>Customers tap once and land straight in your WhatsApp with a message already typed out.</p></div>
+        <div class="card"><div class="ico">🗺️</div><h3>Google Maps & Directions</h3>
+          <p>Show customers exactly where your shop, office or workshop is — with one-tap directions.</p></div>
+        <div class="card"><div class="ico">🔍</div><h3>Google Search Setup</h3>
+          <p>Titles, descriptions and structure set up so customers searching your service can find you.</p></div>
+        <div class="card"><div class="ico">🖼️</div><h3>Photo Gallery</h3>
+          <p>Show off your products, projects and premises with a clean, fast-loading gallery.</p></div>
+        <div class="card"><div class="ico">🛠️</div><h3>Free Updates (12 months)</h3>
+          <p>New prices? New stock? Send a WhatsApp message and we'll update your site for free.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec sec-alt">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Perfect for</span>
+        <h2>We build for every kind of Kenyan business</h2>
+      </div>
+      <div class="grid g4">
+        <div class="card"><div class="ico">🛍️</div><h3>Shops & Boutiques</h3><p>Sell online, show your catalogue, take orders on WhatsApp.</p></div>
+        <div class="card"><div class="ico">🍽️</div><h3>Restaurants & Catering</h3><p>Menus, photos, delivery info and table bookings.</p></div>
+        <div class="card"><div class="ico">💇</div><h3>Salons & Barbershops</h3><p>Price lists, styles gallery and appointment booking.</p></div>
+        <div class="card"><div class="ico">🏗️</div><h3>Contractors & Hardware</h3><p>Services, past projects and instant quote requests.</p></div>
+        <div class="card"><div class="ico">🚗</div><h3>Car Dealers & Garages</h3><p>Vehicle listings, service packages and location maps.</p></div>
+        <div class="card"><div class="ico">🎓</div><h3>Schools & Colleges</h3><p>Courses, fees structure, admissions and contact forms.</p></div>
+        <div class="card"><div class="ico">🏥</div><h3>Clinics & Pharmacies</h3><p>Services, operating hours and appointment booking.</p></div>
+        <div class="card"><div class="ico">🧑‍💼</div><h3>Consultants & Freelancers</h3><p>Personal brand, portfolio and enquiry forms.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-tight">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Don't see your business type?</h2>
+        <p>If you run a business in Kenya, we can build a website for it. Tell us what you do on WhatsApp.</p>
+        <div class="row">
+          <a class="btn btn-white" style="width:auto" href="https://wa.me/254792456359?text=Hi%2C%20I%20run%20a%20business%20in%20Kenya%20and%20I%20need%20a%20website" target="_blank" rel="noopener">💬 Ask on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 3 — PORTFOLIO
+============================================================ -->
+<section class="page" id="portfolio">
+  <div class="sec">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Our portfolio</span>
+        <h2>Websites we've built for Kenyan businesses</h2>
+        <p class="lead">Every one of these was delivered for a flat Ksh 10,000 — with hosting included.</p>
+      </div>
+
+      <div class="grid g3">
+
+        <!-- 1 -->
+        <div class="work">
+          <div class="mock">
+            <div class="mock-top"><i></i><i></i><i></i><span class="mock-url"></span></div>
+            <div class="mock-body theme-a">
+              <div class="m-nav"><b></b><span></span><span></span><span></span></div>
+              <div class="m-hero"><div class="m-h1"></div><div class="m-h2"></div><div class="m-pill"></div></div>
+              <div class="m-row"><div class="m-card"></div><div class="m-card"></div><div class="m-card"></div></div>
+              <div class="m-strip"></div>
+            </div>
+          </div>
+          <div class="work-meta">
+            <span class="tag">Boutique</span>
+            <h3>Mama Grace Boutique</h3>
+            <p>Nairobi • Catalogue + WhatsApp orders</p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="work">
+          <div class="mock">
+            <div class="mock-top"><i></i><i></i><i></i><span class="mock-url"></span></div>
+            <div class="mock-body theme-b">
+              <div class="m-nav"><b></b><span></span><span></span><span></span></div>
+              <div class="m-split"><div class="m-img"></div><div class="m-card tall"></div></div>
+              <div class="m-row"><div class="m-card"></div><div class="m-card"></div><div class="m-card"></div></div>
+              <div class="m-strip short"></div>
+            </div>
+          </div>
+          <div class="work-meta">
+            <span class="tag">Hardware</span>
+            <h3>Otieno Hardware</h3>
+            <p>Kisumu • Products, quotes & directions</p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="work">
+          <div class="mock">
+            <div class="mock-top"><i></i><i></i><i></i><span class="mock-url"></span></div>
+            <div class="mock-body theme-c">
+              <div class="m-nav"><b></b><span></span><span></span><span></span></div>
+              <div class="m-hero"><div class="m-h1"></div><div class="m-h2"></div><div class="m-pill"></div></div>
+              <div class="m-strip"></div>
+              <div class="m-row"><div class="m-card"></div><div class="m-card"></div><div class="m-card"></div></div>
+            </div>
+          </div>
+          <div class="work-meta">
+            <span class="tag">Salon & Spa</span>
+            <h3>Mwikali Salon & Spa</h3>
+            <p>Machakos • Bookings + price list</p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="work">
+          <div class="mock">
+            <div class="mock-top"><i></i><i></i><i></i><span class="mock-url"></span></div>
+            <div class="mock-body theme-d">
+              <div class="m-nav"><b></b><span></span><span></span><span></span></div>
+              <div class="m-row"><div class="m-card"></div><div class="m-card"></div><div class="m-card"></div></div>
+              <div class="m-hero"><div class="m-h1"></div><div class="m-h2"></div><div class="m-pill"></div></div>
+              <div class="m-strip short"></div>
+            </div>
+          </div>
+          <div class="work-meta">
+            <span class="tag">Dairy Farm</span>
+            <h3>Kiprop Dairy Farm</h3>
+            <p>Eldoret • Supply enquiries + delivery info</p>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="work">
+          <div class="mock">
+            <div class="mock-top"><i></i><i></i><i></i><span class="mock-url"></span></div>
+            <div class="mock-body theme-e">
+              <div class="m-nav"><b></b><span></span><span></span><span></span></div>
+              <div class="m-split"><div class="m-card tall"></div><div class="m-img"></div></div>
+              <div class="m-row"><div class="m-card"></div><div class="m-card"></div><div class="m-card"></div></div>
+            </div>
+          </div>
+          <div class="work-meta">
+            <span class="tag">Restaurant</span>
+            <h3>Aisha's Kitchen</h3>
+            <p>Mombasa • Menu, delivery & catering orders</p>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="work">
+          <div class="mock">
+            <div class="mock-top"><i></i><i></i><i></i><span class="mock-url"></span></div>
+            <div class="mock-body theme-f">
+              <div class="m-nav"><b></b><span></span><span></span><span></span></div>
+              <div class="m-hero"><div class="m-h1"></div><div class="m-h2"></div><div class="m-pill"></div></div>
+              <div class="m-row"><div class="m-card"></div><div class="m-card"></div><div class="m-card"></div></div>
+              <div class="m-strip"></div>
+            </div>
+          </div>
+          <div class="work-meta">
+            <span class="tag">Car Dealer</span>
+            <h3>Kamau Motors</h3>
+            <p>Thika • Vehicle listings + finance enquiries</p>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="work">
+          <div class="mock">
+            <div class="mock-top"><i></i><i></i><i></i><span class="mock-url"></span></div>
+            <div class="mock-body theme-g">
+              <div class="m-nav"><b></b><span></span><span></span><span></span></div>
+              <div class="m-strip"></div>
+              <div class="m-hero"><div class="m-h1"></div><div class="m-h2"></div><div class="m-pill"></div></div>
+              <div class="m-row"><div class="m-card"></div><div class="m-card"></div><div class="m-card"></div></div>
+            </div>
+          </div>
+          <div class="work-meta">
+            <span class="tag">Tailoring</span>
+            <h3>Achieng Tailoring</h3>
+            <p>Nakuru • Gallery + measurement bookings</p>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="work">
+          <div class="mock">
+            <div class="mock-top"><i></i><i></i><i></i><span class="mock-url"></span></div>
+            <div class="mock-body theme-h">
+              <div class="m-nav"><b></b><span></span><span></span><span></span></div>
+              <div class="m-hero"><div class="m-h1"></div><div class="m-h2"></div><div class="m-pill"></div></div>
+              <div class="m-split"><div class="m-img"></div><div class="m-card tall"></div></div>
+            </div>
+          </div>
+          <div class="work-meta">
+            <span class="tag">Tech Repairs</span>
+            <h3>Mutua Tech Repairs</h3>
+            <p>Nairobi • Repair booking + pricing table</p>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="work">
+          <div class="mock">
+            <div class="mock-top"><i></i><i></i><i></i><span class="mock-url"></span></div>
+            <div class="mock-body theme-i">
+              <div class="m-nav"><b></b><span></span><span></span><span></span></div>
+              <div class="m-hero"><div class="m-h1"></div><div class="m-h2"></div><div class="m-pill"></div></div>
+              <div class="m-row"><div class="m-card"></div><div class="m-card"></div><div class="m-card"></div></div>
+              <div class="m-strip short"></div>
+            </div>
+          </div>
+          <div class="work-meta">
+            <span class="tag">School</span>
+            <h3>Baraka Junior Academy</h3>
+            <p>Nyeri • Admissions, fees & gallery</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="center" style="margin-top:44px">
+        <p class="lead" style="margin:0 auto 20px">Want to see your business here? It takes 3 days.</p>
+        <a class="btn btn-wa" href="https://wa.me/254792456359?text=Hi%2C%20I%20saw%20your%20portfolio%20and%20I%20want%20a%20website%20for%20my%20business" target="_blank" rel="noopener">💬 Start my website on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 4 — PRICING
+============================================================ -->
+<section class="page" id="pricing">
+  <div class="sec">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Pricing</span>
+        <h2>Ksh 10,000. One time. Hosting included.</h2>
+        <p class="lead">The price you see is the price you pay. No renewals, no monthly invoices, no surprises.</p>
+      </div>
+
+      <div class="grid g2" style="align-items:start;gap:34px">
+
+        <div class="price-card">
+          <span class="eyebrow" style="background:rgba(255,255,255,.2);color:#fff">Complete package</span>
+          <div class="price-amt"><small>Pay once, own it forever</small>Ksh 10,000</div>
+          <ul class="price-list">
+            <li><span class="tick">✓</span> Custom-designed business website</li>
+            <li><span class="tick">✓</span> Up to 6 pages (Home, About, Services, Gallery, Reviews, Contact)</li>
+            <li><span class="tick">✓</span> <strong>Free hosting — we host it for you</strong></li>
+            <li><span class="tick">✓</span> Domain registration & setup handled by us</li>
+            <li><span class="tick">✓</span> Mobile & tablet responsive design</li>
+            <li><span class="tick">✓</span> WhatsApp chat & order buttons</li>
+            <li><span class="tick">✓</span> Contact form + Google Maps location</li>
+            <li><span class="tick">✓</span> Google search setup (basic SEO)</li>
+            <li><span class="tick">✓</span> Free content updates for 12 months</li>
+            <li><span class="tick">✓</span> Delivered in 3 working days</li>
+          </ul>
+          <div class="price-note">🔒 Unlike other designers, we don't charge you yearly for domain and hosting. That's covered.</div>
+          <a class="btn btn-white" href="https://wa.me/254792456359?text=Hi%2C%20I%20want%20to%20pay%20Ksh%2010%2C000%20for%20my%20website" target="_blank" rel="noopener">💬 Get started on WhatsApp</a>
+        </div>
+
+        <div>
+          <h3 style="font-size:1.3rem;margin-bottom:16px">Why we're different</h3>
+          <div class="compare">
+            <div class="us">
+              <h3>✅ SafariWeb Kenya</h3>
+              <ul>
+                <li><span class="v">✓</span> Ksh 10,000 once</li>
+                <li><span class="v">✓</span> Hosting included forever</li>
+                <li><span class="v">✓</span> No domain renewal bills</li>
+                <li><span class="v">✓</span> No monthly maintenance fee</li>
+                <li><span class="v">✓</span> Free updates for 12 months</li>
+                <li><span class="v">✓</span> Delivered in 3 days</li>
+                <li><span class="v">✓</span> Direct WhatsApp support</li>
+              </ul>
+            </div>
+            <div>
+              <h3>❌ Typical designers</h3>
+              <ul>
+                <li><span class="x">✕</span> Ksh 25,000 – 60,000 upfront</li>
+                <li><span class="x">✕</span> You pay hosting every year</li>
+                <li><span class="x">✕</span> You pay domain renewal yearly</li>
+                <li><span class="x">✕</span> Monthly "maintenance" charges</li>
+                <li><span class="x">✕</span> Every small change is billed</li>
+                <li><span class="x">✕</span> Weeks of waiting</li>
+                <li><span class="x">✕</span> Hard to reach after payment</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:22px">
+            <div class="ico">💳</div>
+            <h3>How payment works</h3>
+            <p style="margin-top:6px">Pay <strong>Ksh 5,000</strong> to start, and the remaining
+              <strong>Ksh 5,000</strong> once you've seen your website and you're happy with it.
+              We accept M-Pesa. No payment until you've approved the design.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec sec-alt">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Optional extras</span>
+        <h2>Need a little more? Add it on.</h2>
+        <p class="lead">These are completely optional — your Ksh 10,000 website already includes everything essential.</p>
+      </div>
+      <div class="grid g3">
+        <div class="card"><div class="ico">🛒</div><h3>Online Shop / E-commerce</h3><p>Full product catalogue with cart and M-Pesa checkout.</p><p style="margin-top:10px;color:var(--green);font-weight:800">+ Ksh 7,000</p></div>
+        <div class="card"><div class="ico">✍️</div><h3>Extra Pages</h3><p>Additional pages beyond the included 6.</p><p style="margin-top:10px;color:var(--green);font-weight:800">+ Ksh 1,000 / page</p></div>
+        <div class="card"><div class="ico">📸</div><h3>Professional Photography</h3><p>We come and shoot your products, premises and team.</p><p style="margin-top:10px;color:var(--green);font-weight:800">From Ksh 4,000</p></div>
+        <div class="card"><div class="ico">🔤</div><h3>Logo Design</h3><p>A clean, professional logo for your business.</p><p style="margin-top:10px;color:var(--green);font-weight:800">+ Ksh 3,000</p></div>
+        <div class="card"><div class="ico">📣</div><h3>Google Business Profile</h3><p>Get listed on Google Maps and search results.</p><p style="margin-top:10px;color:var(--green);font-weight:800">+ Ksh 2,500</p></div>
+        <div class="card"><div class="ico">📊</div><h3>Monthly Updates Plan</h3><p>Unlimited content changes every month (optional).</p><p style="margin-top:10px;color:var(--green);font-weight:800">+ Ksh 1,000 / month</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-tight">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Ksh 10,000 and your business is online.</h2>
+        <p>That's less than what most people pay in a single year for hosting alone. Message us now.</p>
+        <div class="row">
+          <a class="btn btn-white" style="width:auto" href="https://wa.me/254792456359?text=Hi%2C%20I%20want%20the%20Ksh%2010%2C000%20website%20package" target="_blank" rel="noopener">💬 Claim this offer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 5 — REVIEWS
+============================================================ -->
+<section class="page" id="reviews">
+  <div class="sec">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Client reviews</span>
+        <h2>Real businesses. Real results.</h2>
+        <p class="lead">Here's what Kenyan business owners say after we built and hosted their websites.</p>
+      </div>
+
+      <div class="stats" style="margin-bottom:44px">
+        <div class="stat"><b>120+</b><span>Websites delivered</span></div>
+        <div class="stat"><b>4.9★</b><span>Average rating</span></div>
+        <div class="stat"><b>100%</b><span>Hosting included</span></div>
+        <div class="stat"><b>3 days</b><span>Average delivery</span></div>
+      </div>
+
+      <div class="grid g3">
+
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p>"I used to rely only on people passing by my shop. Now customers find me on Google and message
+            me on WhatsApp before coming. <strong>My orders increased by about 40% in three months.</strong>
+            Best Ksh 10,000 I've ever spent on my business."</p>
+          <div class="result">📈 +40% orders in 3 months</div>
+          <div class="who"><div class="avatar">GW</div><div><strong>Grace Wanjiru</strong><span>Mama Grace Boutique, Nairobi</span></div></div>
+        </div>
+
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p>"Other people quoted me Ksh 45,000 and told me I'd pay hosting every year. SafariWeb charged me
+            Ksh 10,000 once and they host it for me. <strong>My monthly revenue went up by about Ksh 60,000</strong>
+            because contractors now call me directly."</p>
+          <div class="result">💵 +Ksh 60,000 / month</div>
+          <div class="who"><div class="avatar">PO</div><div><strong>Peter Otieno</strong><span>Otieno Hardware, Kisumu</span></div></div>
+        </div>
+
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p>"The booking page is a game changer. Ladies book their appointments at night when I've already
+            closed. <strong>I now get 15–20 bookings a week from the website alone.</strong> Very happy."</p>
+          <div class="result">📅 +18 bookings / week</div>
+          <div class="who"><div class="avatar">FM</div><div><strong>Faith Mwikali</strong><span>Mwikali Salon & Spa, Machakos</span></div></div>
+        </div>
+
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p>"I supply milk to hotels and shops. Since the website went live, <strong>I've signed 6 new
+            bulk supply contracts.</strong> People trust a business that has a proper website."</p>
+          <div class="result">🤝 6 new supply contracts</div>
+          <div class="who"><div class="avatar">SK</div><div><strong>Samuel Kiprop</strong><span>Kiprop Dairy Farm, Eldoret</span></div></div>
+        </div>
+
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p>"My menu and prices are online now, so customers already know what they want before they arrive.
+            <strong>Weekend orders for catering went up by nearly half.</strong> And no monthly hosting bills!"</p>
+          <div class="result">📈 +48% catering orders</div>
+          <div class="who"><div class="avatar">AH</div><div><strong>Aisha Hassan</strong><span>Aisha's Kitchen, Mombasa</span></div></div>
+        </div>
+
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p>"I sell cars. People now see my stock online and call before travelling to Thika.
+            <strong>I sold 4 vehicles last month from website enquiries alone.</strong> Worth every shilling."</p>
+          <div class="result">🚗 4 vehicles sold in a month</div>
+          <div class="who"><div class="avatar">JK</div><div><strong>Joseph Kamau</strong><span>Kamau Motors, Thika</span></div></div>
+        </div>
+
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p>"My tailoring gallery is online and clients book measurements through the site.
+            <strong>I've had to hire two more tailors</strong> to keep up with the work. Very grateful."</p>
+          <div class="result">✂️ Hired 2 more staff</div>
+          <div class="who"><div class="avatar">MA</div><div><strong>Mercy Achieng</strong><span>Achieng Tailoring, Nakuru</span></div></div>
+        </div>
+
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p>"Fast, professional and honest. Delivered in 3 days like they promised. When I wanted to change
+            my prices, I just sent a WhatsApp message and it was done the same day. <strong>My repairs
+            bookings doubled.</strong>"</p>
+          <div class="result">🔧 Bookings doubled</div>
+          <div class="who"><div class="avatar">BM</div><div><strong>Brian Mutua</strong><span>Mutua Tech Repairs, Nairobi</span></div></div>
+        </div>
+
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p>"We used to print flyers every term. Now parents just visit the website for fees structure and
+            admissions. <strong>Admissions enquiries rose by over 30%.</strong> The hosting being included
+            made it very affordable for us."</p>
+          <div class="result">🎓 +30% admission enquiries</div>
+          <div class="who"><div class="avatar">EN</div><div><strong>Esther Njeri</strong><span>Baraka Junior Academy, Nyeri</span></div></div>
+        </div>
+
+      </div>
+
+      <div class="center" style="margin-top:44px">
+        <a class="btn btn-wa" href="https://wa.me/254792456359?text=Hi%2C%20I%20read%20your%20reviews%20and%20I%20want%20a%20website%20too" target="_blank" rel="noopener">💬 Join them — WhatsApp us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 6 — PROCESS
+============================================================ -->
+<section class="page" id="process">
+  <div class="sec">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">How it works</span>
+        <h2>From WhatsApp message to live website in 3 days</h2>
+        <p class="lead">You don't need to know anything about websites. We handle everything — you just
+          send us your details.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <h3>Message us on WhatsApp</h3>
+            <p class="muted">Tell us your business name, what you do, and where you're located. That's all we
+              need to start. We'll reply within minutes.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <h3>Send your photos and details</h3>
+            <p class="muted">Share your logo (if you have one), photos of your products or premises, your
+              services, prices and contact details. No logo? We can design one for you.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <h3>We design and build your website</h3>
+            <p class="muted">Our team designs a modern, mobile-friendly website built specifically for your
+              business. We send you a preview link to review before it goes live.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">4</div>
+          <div>
+            <h3>You review and request changes</h3>
+            <p class="muted">Not happy with a colour, photo or wording? Tell us and we'll adjust it — as many
+              times as needed until you're satisfied. No extra charge.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">5</div>
+          <div>
+            <h3>We publish it and host it for you</h3>
+            <p class="muted">We connect your domain, publish your website and host it on our servers. You
+              don't pay anything extra — hosting is fully included in your Ksh 10,000.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">6</div>
+          <div>
+            <h3>You start getting customers</h3>
+            <p class="muted">Share your new website link on WhatsApp, Facebook and your business cards.
+              When you need updates, just send us a message — free for the first 12 months.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec sec-alt">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">What you need to prepare</span>
+        <h2>Four simple things</h2>
+      </div>
+      <div class="grid g4">
+        <div class="card"><div class="ico">📛</div><h3>Business name</h3><p>Your trading name and a short description of what you do.</p></div>
+        <div class="card"><div class="ico">🖼️</div><h3>Photos</h3><p>5–15 clear photos of your products, work or premises.</p></div>
+        <div class="card"><div class="ico">📞</div><h3>Contact details</h3><p>Phone, WhatsApp number, email and your physical location.</p></div>
+        <div class="card"><div class="ico">📋</div><h3>Services & prices</h3><p>A simple list of what you offer and how much you charge.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-tight">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Let's start with step 1</h2>
+        <p>One message is all it takes. We'll guide you through the rest.</p>
+        <div class="row">
+          <a class="btn btn-white" style="width:auto" href="https://wa.me/254792456359?text=Hi%2C%20I%20want%20to%20start%20my%20website%20-%20step%201" target="_blank" rel="noopener">💬 Send the first message</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 7 — FAQ
+============================================================ -->
+<section class="page" id="faq">
+  <div class="sec">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Questions</span>
+        <h2>Frequently asked questions</h2>
+        <p class="lead">Everything Kenyan business owners ask us before getting started.</p>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>Is Ksh 10,000 really the total price?</summary>
+          <p>Yes. Ksh 10,000 is the full, one-time cost for your website — design, development, domain setup
+            and hosting included. There are no monthly fees, no yearly renewal charges and no hidden costs.</p>
+        </details>
+
+        <details>
+          <summary>Do I have to pay for domain and hosting separately?</summary>
+          <p>No — and this is exactly what makes us different. Most web designers build your site and then
+            leave you to pay for a domain name and hosting every year, which can cost you Ksh 8,000–15,000
+            annually. With us, <strong>we host your website for you</strong>. It's all covered in your
+            one-time Ksh 10,000.</p>
+        </details>
+
+        <details>
+          <summary>How long does it take to get my website?</summary>
+          <p>Most websites are designed, built and published within <strong>3 working days</strong> after you
+            send us your content (photos, text, contact details). Larger sites with online shops may take
+            slightly longer.</p>
+        </details>
+
+        <details>
+          <summary>What if I don't have a logo or photos?</summary>
+          <p>No problem. We can design a professional logo for you (+ Ksh 3,000), and we can use clean
+            stock imagery or arrange a photo session for your business (+ from Ksh 4,000).</p>
+        </details>
+
+        <details>
+          <summary>How do I pay?</summary>
+          <p>We accept <strong>M-Pesa</strong>. You pay 50% (Ksh 5,000) to start, and the remaining
+            Ksh 5,000 once you've seen your website and you're happy with it. No payment is required
+            until you approve the design.</p>
+        </details>
+
+        <details>
+          <summary>Can I make changes after the website goes live?</summary>
+          <p>Yes. You get <strong>free content updates for 12 months</strong> — new prices, new photos,
+            new services, changed phone numbers. Just send a WhatsApp message and we'll handle it. After
+            12 months, updates are available at a small fee, or you can take our optional monthly plan.</p>
+        </details>
+
+        <details>
+          <summary>Will my website work on phones?</summary>
+          <p>Absolutely. Every website we build is designed mobile-first because the majority of Kenyan
+            customers browse on their phones. Your site will look great on phones, tablets and computers.</p>
+        </details>
+
+        <details>
+          <summary>Will customers find my business on Google?</summary>
+          <p>We set up your page titles, descriptions, structure and Google Maps location so your business
+            can appear in search results for your services and town. We also offer a Google Business Profile
+            setup as an optional extra.</p>
+        </details>
+
+        <details>
+          <summary>Do I own the website?</summary>
+          <p>Yes — the website content, design and branding belong to you. We simply host and maintain it
+            for you as part of your package.</p>
+        </details>
+
+        <details>
+          <summary>Do you work with businesses outside Nairobi?</summary>
+          <p>Yes. We work with businesses all over Kenya — Mombasa, Kisumu, Nakuru, Eldoret, Thika, Nyeri,
+            Machakos and beyond. Everything is done through WhatsApp and email, so distance is never a problem.</p>
+        </details>
+
+        <details>
+          <summary>What if I already have a website?</summary>
+          <p>We can redesign it, move it to our hosting, or build you a brand new one. Send us the link on
+            WhatsApp and we'll advise you on the best option.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-tight">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Still have a question?</h2>
+        <p>Ask us anything on WhatsApp. We reply fast and we don't do hard selling.</p>
+        <div class="row">
+          <a class="btn btn-white" style="width:auto" href="https://wa.me/254792456359?text=Hi%2C%20I%20have%20a%20question%20about%20your%20website%20service" target="_blank" rel="noopener">💬 Ask your question</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 8 — ABOUT
+============================================================ -->
+<section class="page" id="about">
+  <div class="sec">
+    <div class="container">
+      <div class="grid g2" style="align-items:center;gap:48px">
+        <div>
+          <span class="eyebrow">About us</span>
+          <h2>We put Kenyan businesses online — without the yearly bills</h2>
+          <p class="lead" style="margin-top:16px">
+            SafariWeb Kenya was started with one simple observation: most small businesses in Kenya can't
+            afford a website because the costs never stop. You pay for the design, then you pay for the
+            domain, then hosting, then maintenance — every single year.
+          </p>
+          <p class="lead" style="margin-top:14px">
+            So we changed the model. <strong>One payment of Ksh 10,000. We design it, we build it,
+            and we host it for you.</strong> No renewals. No monthly invoices. No nasty surprises.
+          </p>
+          <p class="lead" style="margin-top:14px">
+            Over 120 Kenyan businesses — boutiques, hardware shops, salons, farms, restaurants, garages,
+            schools and consultants — now have a professional online presence because of this approach.
+          </p>
+          <div style="margin-top:26px">
+            <a class="btn btn-wa" href="https://wa.me/254792456359?text=Hi%2C%20I%20want%20to%20know%20more%20about%20SafariWeb%20Kenya" target="_blank" rel="noopener">💬 Talk to us on WhatsApp</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="mock">
+            <div class="mock-top"><i></i><i></i><i></i><span class="mock-url"></span></div>
+            <div class="mock-body theme-a">
+              <div class="m-nav"><b></b><span></span><span></span><span></span></div>
+              <div class="m-hero"><div class="m-h1"></div><div class="m-h2"></div><div class="m-pill"></div></div>
+              <div class="m-row"><div class="m-card"></div><div class="m-card"></div><div class="m-card"></div></div>
+              <div class="m-split"><div class="m-img"></div><div class="m-card tall"></div></div>
+              <div class="m-strip"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec sec-alt">
+    <div class="container">
+      <div class="stats">
+        <div class="stat"><b>120+</b><span>Websites delivered</span></div>
+        <div class="stat"><b>47</b><span>Counties reached</span></div>
+        <div class="stat"><b>4.9★</b><span>Client rating</span></div>
+        <div class="stat"><b>3 days</b><span>Average turnaround</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Our values</span>
+        <h2>What we stand for</h2>
+      </div>
+      <div class="grid g3">
+        <div class="card"><div class="ico">🤝</div><h3>Honest pricing</h3>
+          <p>One price, stated upfront. No hidden fees, no surprise invoices, no pressure tactics.</p></div>
+        <div class="card"><div class="ico">🛡️</div><h3>We stay with you</h3>
+          <p>We don't disappear after payment. We host your site and keep it running — that's our job.</p></div>
+        <div class="card"><div class="ico">⚡</div><h3>Fast delivery</h3>
+          <p>You shouldn't wait weeks for a simple business website. Three days, then you're live.</p></div>
+        <div class="card"><div class="ico">🇰🇪</div><h3>Built for Kenya</h3>
+          <p>We understand local businesses, local customers, M-Pesa and mobile-first browsing.</p></div>
+        <div class="card"><div class="ico">📈</div><h3>Results matter</h3>
+          <p>A pretty website that brings no customers is a waste. We build sites that generate enquiries.</p></div>
+        <div class="card"><div class="ico">💬</div><h3>Real communication</h3>
+          <p>You talk to a real person on WhatsApp — not a ticket system or a chatbot.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 9 — BLOG
+============================================================ -->
+<section class="page" id="blog">
+  <div class="sec">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Tips & insights</span>
+        <h2>Helping Kenyan businesses grow online</h2>
+        <p class="lead">Short, practical advice for business owners in Kenya.</p>
+      </div>
+
+      <div class="grid g2">
+
+        <div class="card">
+          <div class="ico">💡</div>
+          <h3>Why every Kenyan business needs a website in 2026</h3>
+          <p style="margin-top:8px">Most customers now search on their phones before buying. If your business
+            has no website, you're invisible to them — and they'll buy from whoever they find first.
+            A Facebook page alone isn't enough because you don't own it and you can't be found on Google.</p>
+          <p style="margin-top:10px">A simple website gives you a permanent address on the internet that
+            customers can find at any time, day or night.</p>
+          <a href="#contact" class="btn btn-ghost btn-sm" style="margin-top:16px">Get a website →</a>
+        </div>
+
+        <div class="card">
+          <div class="ico">🏠</div>
+          <h3>Domain vs hosting — and why it costs you every year</h3>
+          <p style="margin-top:8px"><strong>Domain</strong> is your web address (like yourbusiness.co.ke).
+            <strong>Hosting</strong> is the space where your website lives. Most designers charge you for
+            both, every single year.</p>
+          <p style="margin-top:10px">That's why so many Kenyan businesses see their website disappear after
+            12 months. With us, both are covered in your one-time Ksh 10,000 — we host it for you.</p>
+          <a href="#pricing" class="btn btn-ghost btn-sm" style="margin-top:16px">See pricing →</a>
+        </div>
+
+        <div class="card">
+          <div class="ico">📱</div>
+          <h3>5 things that make customers trust your business online</h3>
+          <p style="margin-top:8px">1. A professional website with your real photos.<br>
+            2. Your physical location and a working phone number.<br>
+            3. Reviews from real customers.<br>
+            4. Clear prices or a clear way to get a quote.<br>
+            5. Fast loading — nobody waits for a slow site.</p>
+          <p style="margin-top:10px">All five are standard in every website we build.</p>
+          <a href="#portfolio" class="btn btn-ghost btn-sm" style="margin-top:16px">See examples →</a>
+        </div>
+
+        <div class="card">
+          <div class="ico">💬</div>
+          <h3>Turn your website visitors into WhatsApp customers</h3>
+          <p style="margin-top:8px">Kenyans love WhatsApp. That's why every website we build has a WhatsApp
+            button on every page. A customer taps it once and lands in your chat with a message already
+            typed out — no copying numbers, no confusion.</p>
+          <p style="margin-top:10px">This single feature is the reason most of our clients see enquiries
+            increase within the first month.</p>
+          <a href="#reviews" class="btn btn-ghost btn-sm" style="margin-top:16px">See client results →</a>
+        </div>
+
+        <div class="card">
+          <div class="ico">🔍</div>
+          <h3>How to get your business found on Google in Kenya</h3>
+          <p style="margin-top:8px">Start with the basics: a website with clear page titles mentioning your
+            service and town, a Google Business Profile with your location and hours, and consistent contact
+            details everywhere online.</p>
+          <p style="margin-top:10px">We set up the basics for every client, and offer full Google Business
+            Profile setup as an add-on.</p>
+          <a href="#services" class="btn btn-ghost btn-sm" style="margin-top:16px">Our services →</a>
+        </div>
+
+        <div class="card">
+          <div class="ico">📸</div>
+          <h3>Your photos are your best salespeople</h3>
+          <p style="margin-top:8px">Stock photos look fake. Real photos of your shop, your staff, your
+            products and your work build instant trust with Kenyan customers.</p>
+          <p style="margin-top:10px">Even phone photos work well if they're clear and well-lit. We can also
+            arrange a professional shoot for your business.</p>
+          <a href="#contact" class="btn btn-ghost btn-sm" style="margin-top:16px">Ask about photos →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-tight">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Ready to put these tips to work?</h2>
+        <p>We'll build your website for Ksh 10,000 — and host it for you at no extra cost.</p>
+        <div class="row">
+          <a class="btn btn-white" style="width:auto" href="https://wa.me/254792456359?text=Hi%2C%20I%20read%20your%20blog%20and%20I%20want%20a%20website" target="_blank" rel="noopener">💬 Message us on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 10 — CONTACT
+============================================================ -->
+<section class="page" id="contact">
+  <div class="sec">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Get in touch</span>
+        <h2>Let's build your website</h2>
+        <p class="lead">The fastest way to reach us is WhatsApp. Send one message and we'll take it from there.</p>
+      </div>
+
+      <div class="grid g2" style="gap:34px;align-items:start">
+
+        <div>
+          <div class="card" style="text-align:center;padding:34px">
+            <div style="font-size:2.6rem;margin-bottom:10px">💬</div>
+            <h3 style="font-size:1.25rem">Chat with us on WhatsApp</h3>
+            <p style="margin-top:10px">Tap the button below and you'll be taken straight to our WhatsApp.
+              Your message will already be written — just press send.</p>
+            <a class="btn btn-wa" style="margin-top:20px;width:100%"
+               href="https://wa.me/254792456359?text=Hi%20SafariWeb%2C%20I%20want%20a%20website%20for%20my%20business%20at%20Ksh%2010%2C000"
+               target="_blank" rel="noopener">💬 Open WhatsApp chat</a>
+            <p style="font-size:.78rem;margin-top:12px;color:var(--muted)">Average reply time: under 10 minutes</p>
+          </div>
+
+          <div class="grid g2" style="margin-top:20px">
+            <div class="card">
+              <div class="ico">⚡</div>
+              <h3>Fast replies</h3>
+              <p>We're on WhatsApp from 7am to 9pm, every day including weekends.</p>
+            </div>
+            <div class="card">
+              <div class="ico">🇰🇪</div>
+              <h3>All of Kenya</h3>
+              <p>Nairobi, Mombasa, Kisumu, Nakuru, Eldoret, Thika, Nyeri and beyond.</p>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:20px">
+            <div class="ico">💳</div>
+            <h3>Payment</h3>
+            <p>M-Pesa accepted. Pay Ksh 5,000 to start and Ksh 5,000 after you approve your website.</p>
+          </div>
+        </div>
+
+        <div class="card" style="padding:30px">
+          <h3 style="margin-bottom:6px">Or send us your details</h3>
+          <p style="font-size:.88rem;color:var(--muted);margin-bottom:20px">
+            Fill this in and we'll get back to you on WhatsApp.
+          </p>
+
+          <form class="form" id="contactForm">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" placeholder="e.g. Grace Wanjiru" required>
+            </div>
+            <div class="field">
+              <label for="biz">Business name</label>
+              <input type="text" id="biz" placeholder="e.g. Mama Grace Boutique" required>
+            </div>
+            <div class="field">
+              <label for="type">Type of business</label>
+              <select id="type">
+                <option>Shop / Boutique</option>
+                <option>Restaurant / Catering</option>
+                <option>Salon / Barbershop</option>
+                <option>Contractor / Hardware</option>
+                <option>Car dealer / Garage</option>
+                <option>School / College</option>
+                <option>Clinic / Pharmacy</option>
+                <option>Consultant / Freelancer</option>
+                <option>Farm / Agri-business</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="town">Town / County</label>
+              <input type="text" id="town" placeholder="e.g. Nairobi" required>
+            </div>
+            <div class="field">
+              <label for="msg">Tell us about your business</label>
+              <textarea id="msg" placeholder="What do you sell or offer? Do you have a logo and photos?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-wa" style="width:100%">💬 Send via WhatsApp</button>
+            <p style="font-size:.75rem;color:var(--muted);text-align:center">
+              This opens WhatsApp with your details filled in. Nothing is stored on this website.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <div class="f-logo"><span class="logo-mark">SW</span> SafariWeb Kenya</div>
+        <p>Professional websites for Kenyan businesses. Ksh 10,000 one-time — hosting included,
+          no monthly fees, no renewal charges.</p>
+        <a class="btn btn-wa btn-sm" style="margin-top:18px"
+           href="https://wa.me/254792456359?text=Hi%20SafariWeb%2C%20I%20want%20a%20website%20for%20my%20business"
+           target="_blank" rel="noopener">💬 WhatsApp us</a>
+      </div>
+
+      <div>
+        <h4>Pages</h4>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+
+      <div>
+        <h4>More</h4>
+        <a href="#process">Our Process</a>
+        <a href="#faq">FAQ</a>
+        <a href="#about">About Us</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div>
+        <h4>Get started</h4>
+        <p>One payment of <strong style="color:#fff">Ksh 10,000</strong>. We design, build and host your
+          website for you. Ready in 3 days.</p>
+        <a href="#pricing" style="color:#fff;font-weight:700;margin-top:10px">See what's included →</a>
+      </div>
+    </div>
+
+    <div class="f-bottom">
+      <span>© <span id="yr"></span> SafariWeb Kenya. All rights reserved.</span>
+      <span>Websites for every business in Kenya 🇰🇪</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+<a class="wa-float"
+   href="https://wa.me/254792456359?text=Hi%20SafariWeb%2C%20I%20want%20a%20website%20for%20my%20business%20at%20Ksh%2010%2C000"
+   target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/>
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23z"/>
+  </svg>
+</a>
+
+<script>
+/* ============ ROUTER ============ */
+const PAGES = ['home','services','portfolio','pricing','reviews','process','faq','about','blog','contact'];
+
+function showPage(id){
+  if(!PAGES.includes(id)) id = 'home';
+  document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.id === id));
+  document.querySelectorAll('nav a[data-page]').forEach(a =>
+    a.classList.toggle('active', a.dataset.page === id)
+  );
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  closeMenu();
+}
+
+function closeMenu(){
+  document.getElementById('nav').classList.remove('open');
+  const b = document.getElementById('burger');
+  b.classList.remove('active');
+  b.setAttribute('aria-expanded','false');
+}
+
+/* ============ MOBILE MENU ============ */
+const burger = document.getElementById('burger');
+const nav = document.getElementById('nav');
+
+burger.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  burger.classList.toggle('active', open);
+  burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+
+/* Close menu when a link is tapped */
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+/* Close menu when clicking outside (mobile) */
+document.addEventListener('click', e => {
+  if (window.innerWidth <= 1080 && nav.classList.contains('open')) {
+    if (!nav.contains(e.target) && !burger.contains(e.target)) closeMenu();
+  }
+});
+
+/* Close on resize to desktop */
+window.addEventListener('resize', () => { if (window.innerWidth > 1080) closeMenu(); });
+
+/* ============ HASH ROUTING ============ */
+function route(){
+  const id = (location.hash || '#home').replace('#','');
+  showPage(id);
+}
+window.addEventListener('hashchange', route);
+window.addEventListener('DOMContentLoaded', route);
+route();
+
+/* ============ CONTACT FORM → WHATSAPP ============ */
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const biz  = document.getElementById('biz').value.trim();
+  const type = document.getElementById('type').value;
+  const town = document.getElementById('town').value.trim();
+  const msg  = document.getElementById('msg').value.trim();
+
+  const text =
+    "Hi SafariWeb Kenya! I want a website (Ksh 10,000).%0A%0A" +
+    "*Name:* " + encodeURIComponent(name) + "%0A" +
+    "*Business:* " + encodeURIComponent(biz) + "%0A" +
+    "*Type:* " + encodeURIComponent(type) + "%0A" +
+    "*Town:* " + encodeURIComponent(town) + "%0A" +
+    "*Details:* " + encodeURIComponent(msg || '—');
+
+  window.open("https://wa.me/254792456359?text=" + text, "_blank");
+});
+
+/* ============ YEAR ============ */
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
